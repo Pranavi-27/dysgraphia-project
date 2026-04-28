@@ -1,0 +1,257 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Poppins:wght@400;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg: #CBCE91;      /* Light background */
+  --text: #222;       /* Dark text */
+  --card-bg: #e6e8b0; /* Slightly lighter shade of background */
+  --accent: #d3687f;  /* Pink/red shade */
+}
+
+/* Dark theme overrides */
+body.dark {
+  --bg: #0d0d0d;
+  --text: #f5f5f5;
+  --card-bg: #1a1a1a;
+  
+  --accent: #9b5de5; /* slightly richer purple */
+ /* Lavender */
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: "Poppins", sans-serif;
+  min-height: 100vh;
+  text-align: center;
+  padding: 20px;
+  transition: all 0.4s ease-in-out;
+}
+
+/* Titles */
+h1 {
+  font-family: 'Fredoka One', cursive;
+  font-size: 2.8rem;
+  margin-bottom: 20px;
+  color: var(--accent);
+}
+
+h2 {
+  font-size: 2rem;
+  margin: 40px 0 15px;
+  color: var(--accent);
+}
+
+p {
+  font-size: 1.1rem;
+  margin: 10px 0;
+}
+
+/* Grid layout */
+.game-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  justify-items: center;
+  margin-bottom: 40px;
+}
+
+/* Cards */
+.game-card {
+  background: var(--card-bg);
+  border: 2px solid var(--accent);
+  border-radius: 15px;
+  padding: 25px;
+  width: 360px;
+  text-align: left;
+  box-shadow: 0 0 10px rgba(0,0,0,0.15);
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.game-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.game-card h3 {
+  font-size: 1.6rem;
+  margin-bottom: 12px;
+  color: var(--accent);
+}
+
+/* Buttons */
+button {
+  background: var(--accent);
+  border: none;
+  border-radius: 25px;
+  padding: 10px 22px;
+  font-size: 1rem;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 15px;
+  transition: all 0.3s ease;
+}
+/* Container for MCQ buttons */
+.mcq-container {
+  display: flex;
+  flex-direction: column;   /* vertical stacking */
+  align-items: center;      /* horizontally center buttons */
+  gap: 5px;                /* space between buttons */
+  margin-top: 20px;
+}
+
+/* MCQ button overrides global button styles */
+/* MCQ button overrides global button styles */
+.mcq-btn {
+  background: var(--accent);
+  color: white;
+  display: flex;           /* number + text side by side */
+  justify-content: center; /* center content inside button */
+  align-items: center;     /* vertical align */
+  gap: 0.2rem;             /* space between number & text */
+  padding: 0.75rem 2rem;   /* increase padding a bit */
+  border-radius: 0.75rem;
+  width: auto;             /* not full width */
+  min-width: 250px;        /* keeps buttons similar size */
+  text-align: center;
+}
+
+
+.mcq-btn:hover {
+  background: var(--accent);
+  color: var(--bg); /* blue-700 */
+  transform: scale(1.02);
+}
+button:hover {
+  /* darker shade of accent */
+  transform: scale(1.05);
+}
+
+/* Row of buttons (Shapes, English, Telugu) */
+.button-row {
+  display: flex;
+  gap: 25px;
+  justify-content: center;
+  margin-top: 25px;
+}
+
+/* Theme toggle */
+.theme-toggle {
+  position: absolute;
+  top: 20px;
+  right: 25px;
+  padding: 8px 16px;
+  font-size: 0.9rem;
+  border-radius: 20px;
+  border: 2px solid var(--accent);
+  background: var(--bg);
+  color: var(--accent);
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.theme-toggle:hover {
+  background: var(--accent);
+  color: var(--bg);
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--bg);
+  padding: 12px 20px;
+  border-bottom: 2px solid var(--accent);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+border-bottom: none;
+  /* 👇 Add space below navbar line */
+  margin-bottom: 20px;
+}
+
+.nav-center {
+  flex: 1;
+  text-align: center;
+}
+
+.navbar-title {
+  font-family: 'Fredoka One', cursive;
+  font-size: 3rem;   /* ⬆ Increased font size */
+  font-weight: bold;
+  color: var(--accent);
+}
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+
+
+
+.back-btn {
+   background: var(--accent);
+  color: white;
+  border: none;
+  border-radius: 25px;
+  padding: 8px 18px;
+  font-size: 0.95rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* ✅ FIXED hover (use accent instead of hardcoded pink) */
+.back-btn:hover {
+  background: var(--accent);
+  color: var(--bg);
+  filter: brightness(0.9);
+  transform: scale(1.05);
+}
+
+/* Right side (screening + theme) */
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Screening button */
+.screening-btn {
+  background: var(--accent);
+  color: white;
+  border: none;
+  border-radius: 25px;
+  padding: 8px 18px;
+  font-size: 0.95rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.screening-btn:hover {
+background: var(--accent);
+  color: var(--bg);
+  transform: scale(1.05);
+}
+
+/* Theme toggle inside navbar (overrides absolute style from home page) */
+.navbar .theme-toggle {
+  position: static;
+  border-radius: 25px;
+  border: 2px solid var(--accent);
+  background: var(--bg);
+  color: var(--accent);
+  font-weight: bold;
+}
+
+.navbar .theme-toggle:hover {
+  background: var(--accent);
+  color: var(--bg);
+}

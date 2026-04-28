@@ -1,0 +1,35 @@
+.trace-svg {
+  width: 320px;   /* 🔥 bigger visually */
+  height: 320px;
+}
+
+.trace-box {
+  fill: rgba(0, 0, 0, 0.05);
+  stroke: black;
+  stroke-width: 2;
+  rx: 10;
+}
+.trace-nav {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 15px;
+}
+/* 🟦 Practice box */
+.trace-box {
+  fill: rgba(0, 0, 0, 0.05); /* slightly darker than bg */
+  stroke: black;
+  stroke-width: 2;
+  rx: 10; /* rounded corners */
+}
+
+/* Messages */
+.success-msg {
+  color: green;
+  font-weight: bold;
+}
+
+.error-msg {
+  color: red;
+  font-weight: bold;
+}

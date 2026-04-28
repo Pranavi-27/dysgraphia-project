@@ -1,0 +1,80 @@
+
+body {
+  height: 100vh;
+  box-sizing: border-box;
+  padding: 15px;
+}
+
+.dot-game-container {
+  text-align: center;
+  background: #d7db9a;
+  padding: 20px;
+  border-radius: 12px;
+  max-width: 850px;
+  margin: 10px auto;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+}
+
+.dot-game-container h2 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.timer {
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+.dot-game-container svg {
+  max-height: 60vh;
+  border: 2px solid black;
+  border-radius: 10px;
+  background: #f9f9f9;
+  margin: 10px auto;
+  display: block;
+}
+
+.dot-game-container circle {
+  cursor: pointer;
+}
+
+.button-group {
+  margin-top: 15px;
+}
+
+.button-group button {
+  border: none;
+  padding: 14px 28px;      /* ⬆ bigger button */
+  margin: 0 10px;          /* more spacing */
+  border-radius: 12px;     /* smoother rounded look */
+  cursor: pointer;
+  font-size: 1.2rem;       /* ⬆ bigger text */
+  font-weight: bold;       /* stronger text */
+  transition: all 0.3s ease;
+  color: black;
+}
+
+.reset-btn {
+  background: #ff9800;
+}
+.reset-btn:hover {
+  background: #e68900;
+}
+
+.next-btn {
+  background: #4caf50;
+}
+.next-btn:hover {
+  background: #3e8e41;
+}
+
+.home-btn {
+  background: #2196f3;
+}
+.home-btn:hover {
+  background: #0b7dda;
+}
+.preview-shape {
+  margin-bottom: 10px;
+}
